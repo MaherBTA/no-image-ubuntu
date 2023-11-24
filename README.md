@@ -9,9 +9,9 @@ First, because it is open source and the source code is available. not like Wind
 Secondly, because it is, I think, the most used distribution.
 
 ## Pathway
-This will be achieved by :
-1- removing all media codecs from the CORE OS
-2- remove media support from browsers
+This will be achieved by :\
+1- removing all media codecs from the CORE OS\
+2- remove media support from browsers\
 3- block anyway to install or download media codecs
 
 ## Who needs this?
