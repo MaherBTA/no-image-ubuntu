@@ -8,15 +8,19 @@ sudo apt-get build-dep linux linux-image-unsigned-$(uname -r)
 sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf llvm
 
 ```
+### Configure the kernel
+1- Enter jammy folder \
+2- run ``make clean`` \
+3- then ``make menuconfig`` \
+4- remove multimedia support that you can find under (device drivers) > (multimedia)
 
-### Building the kernel
+### Building the kernel the old way
 
 ```console
-    LANG=C fakeroot debian/rules clean
-    # quicker build:
-    LANG=C fakeroot debian/rules binary-headers binary-generic binary-perarch
-    # if you need linux-tools or lowlatency kernel, run instead:
-    LANG=C fakeroot debian/rules binary
+    make clean
+    make deb-pkg
+    You can enable parallel make use make -j). Try 1+number of processor cores, e.g. 3 if you have a dual core processor: 
+    make -j3 deb-pkg
 ```
 Some files will be created
 
