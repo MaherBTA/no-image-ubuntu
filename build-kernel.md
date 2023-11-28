@@ -18,9 +18,7 @@ sudo apt-get install libncurses-dev gawk flex bison openssl libssl-dev dkms libe
 
 ```console
     make clean
-    make deb-pkg
-    You can enable parallel make use make -j). Try 1+number of processor cores, e.g. 3 if you have a dual core processor: 
-    make -j3 deb-pkg
+    make -j `getconf _NPROCESSORS_ONLN` bindeb-pkg LOCALVERSION=-custom
 ```
 Some files will be created
 
